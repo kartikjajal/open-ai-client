@@ -1,4 +1,4 @@
-package org.spring.openai.learn.openai.model;
+package org.spring.openai.learn.model;
 
 import lombok.Data;
 
@@ -12,6 +12,4 @@ public class ChatCompletionResponse {
     private String model;
     private Usage usage;
     private List<Choice> choices;
-
-
 }

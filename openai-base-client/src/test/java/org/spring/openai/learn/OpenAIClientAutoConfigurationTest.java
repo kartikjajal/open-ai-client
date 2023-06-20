@@ -4,8 +4,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.spring.openai.client.OpenAIClientAutoConfiguration;
-import org.spring.openai.client.config.OpenAIConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.test.context.TestPropertySource;
@@ -27,7 +25,8 @@ class OpenAIClientAutoConfigurationTest {
         new ApplicationContextRunner()
                 .withUserConfiguration(OpenAIClientAutoConfiguration.class)
                 .run(context -> {
-            Assertions.assertThat(context).hasSingleBean(OpenAIClientAutoConfiguration.class);
-        });
+                    Assertions.assertThat(context)
+                              .hasSingleBean(OpenAIClientAutoConfiguration.class);
+                });
     }
 }

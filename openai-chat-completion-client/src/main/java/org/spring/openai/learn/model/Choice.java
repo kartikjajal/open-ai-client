@@ -1,4 +1,4 @@
-package org.spring.openai.learn.openai.model;
+package org.spring.openai.learn.model;
 
 import lombok.Data;
 

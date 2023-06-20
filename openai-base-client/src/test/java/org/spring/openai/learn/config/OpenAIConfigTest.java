@@ -29,17 +29,17 @@ class OpenAIConfigTest {
     private OpenAIConfig subject;
 
     @Test
-    void test_config_success(){
+    void test_config_success() {
         Assertions.assertThat(subject)
-                .isNotNull();
+                  .isNotNull();
 
         Assertions.assertThat(subject.getKey())
-                .isEqualTo("test-key");
+                  .isEqualTo("test-key");
 
         Assertions.assertThat(subject.getModel())
-                .isEqualTo("gpt-3.5-turbo");
+                  .isEqualTo("gpt-3.5-turbo");
 
         Assertions.assertThat(subject.getServerUrl())
-                .isEqualTo("https://api.openai.com/v1/chat/completions");
+                  .isEqualTo("https://api.openai.com/v1/chat/completions");
     }
 }

@@ -1,13 +1,13 @@
-package org.spring.openai.learn.openai.model;
+package org.spring.openai.learn.model;
 
 import lombok.Builder;
 import lombok.Getter;
 
 import java.util.List;
 
-@Builder
 @Getter
-public class ChatRequest {
+@Builder
+public class ChatCompletionRequest {
     private String model;
     private List<Message> messages;
     private int n;

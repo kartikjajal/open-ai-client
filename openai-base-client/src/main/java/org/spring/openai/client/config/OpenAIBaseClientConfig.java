@@ -1,7 +1,6 @@
 package org.spring.openai.client.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.ClientRequest;
@@ -19,17 +18,17 @@ public class OpenAIBaseClientConfig {
     @OpenAIBaseClient
     public WebClient.Builder baseClient() {
         return WebClient.builder()
-                .baseUrl(openAIConfig.getServerUrl())
-                .filter(fillAuthenticationHeader());
+                        .baseUrl(openAIConfig.getServerUrl())
+                        .filter(fillAuthenticationHeader());
     }
 
     ExchangeFilterFunction fillAuthenticationHeader() {
 
         return ExchangeFilterFunction.ofRequestProcessor(clientRequest ->
                 Mono.just(ClientRequest
-                                .from(clientRequest)
-                                .header("Authorization", "YOUR_TOKEN")
-                                .build()));
+                        .from(clientRequest)
+                        .header("Authorization", "YOUR_TOKEN")
+                        .build()));
     }
 }
 
