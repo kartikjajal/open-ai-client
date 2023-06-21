@@ -37,8 +37,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
         "openai.chat-completion.temperature=0.2",
         "openai.chat-completion.role=system"
 })
-@WireMockTest(httpsPort = 9898)
-public class OpenAIChatCompletionClientTest {
+@WireMockTest(httpPort = 9898)
+class OpenAIChatCompletionClientTest {
 
     @Autowired
     private OpenAIChatCompletionClient chatCompletionClient;

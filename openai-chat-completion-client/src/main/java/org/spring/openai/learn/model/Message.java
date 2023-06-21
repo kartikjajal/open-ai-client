@@ -1,9 +1,8 @@
 package org.spring.openai.learn.model;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
-@Getter
+@Data
 @Builder
 public class Message {
     private String role;
