@@ -6,7 +6,8 @@
 	<modules>
 		<module>openai-base-client</module>
         <module>openai-chat-completion-client</module>
-    </modules>
+		<module>open-ai-client-integration</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
