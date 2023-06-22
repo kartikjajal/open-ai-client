@@ -12,9 +12,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {
-        OpenAIConfig.class
-})
 @ImportAutoConfiguration(classes = {
         OpenAIClientAutoConfiguration.class
 })

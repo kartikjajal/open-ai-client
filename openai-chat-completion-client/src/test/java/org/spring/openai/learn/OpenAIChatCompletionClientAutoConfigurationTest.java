@@ -15,11 +15,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {
-        OpenAIChatCompletionClientConfig.class,
-        OpenAIConfig.class,
-        OpenAIBaseClientConfig.class
-})
 @ImportAutoConfiguration(classes = {
         OpenAIClientAutoConfiguration.class,
         OpenAIChatCompletionClientAutoConfiguration.class
@@ -38,8 +33,7 @@ class OpenAIChatCompletionClientAutoConfigurationTest {
     @Test
     void test_successful_autoconfigured() {
         new ApplicationContextRunner()
-                .withUserConfiguration(OpenAIConfig.class,
-                        OpenAIChatCompletionClientConfig.class,
+                .withUserConfiguration(
                         OpenAIChatCompletionClientAutoConfiguration.class,
                         OpenAIClientAutoConfiguration.class)
                 .run((context) -> {

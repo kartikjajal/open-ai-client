@@ -8,7 +8,7 @@ import java.util.List;
 public class ChatCompletionResponse {
     private String id;
     private String object;
-    private Long crated;
+    private Long created;
     private String model;
     private Usage usage;
     private List<Choice> choices;

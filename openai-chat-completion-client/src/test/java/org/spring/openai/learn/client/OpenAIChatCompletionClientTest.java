@@ -22,10 +22,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {
-        OpenAIConfig.class,
-        OpenAIChatCompletionClientConfig.class
-})
 @ImportAutoConfiguration(classes = {
         OpenAIClientAutoConfiguration.class,
         OpenAIChatCompletionClientAutoConfiguration.class
@@ -46,8 +42,7 @@ class OpenAIChatCompletionClientTest {
     @Value("classpath:chat-completion-response.json")
     private Resource expectedResource;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     @SneakyThrows

@@ -12,8 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @ImportAutoConfiguration(classes = {
-        OpenAIClientAutoConfiguration.class,
-        OpenAIConfig.class
+        OpenAIClientAutoConfiguration.class
 })
 @TestPropertySource(properties = {
         "openai.server-url: https://api.openai.com/v1/chat/completions",

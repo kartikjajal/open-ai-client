@@ -15,10 +15,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {
-        OpenAIConfig.class,
-        OpenAIChatCompletionClientConfig.class,
-})
 @ImportAutoConfiguration(classes = {
         OpenAIClientAutoConfiguration.class,
         OpenAIChatCompletionClientAutoConfiguration.class
