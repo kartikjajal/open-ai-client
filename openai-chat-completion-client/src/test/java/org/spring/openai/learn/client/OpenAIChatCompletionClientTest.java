@@ -9,15 +9,13 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.spring.openai.client.OpenAIClientAutoConfiguration;
-import org.spring.openai.client.config.OpenAIConfig;
 import org.spring.openai.learn.OpenAIChatCompletionClientAutoConfiguration;
-import org.spring.openai.learn.config.OpenAIChatCompletionClientConfig;
+import org.spring.openai.learn.config.OpenAIChatCompletionClient;
 import org.spring.openai.learn.model.ChatCompletionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.core.io.Resource;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -54,7 +52,7 @@ class OpenAIChatCompletionClientTest {
                                  .willReturn(ResponseDefinitionBuilder.okForJson(expected)));
         ChatCompletionResponse actual = chatCompletionClient.completeChat("hi to openai");
         Assertions.assertThat(actual)
-                .usingRecursiveComparison()
-                .isEqualTo(expected);
+                  .usingRecursiveComparison()
+                  .isEqualTo(expected);
     }
 }

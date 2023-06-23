@@ -1,8 +1,7 @@
-package org.spring.openai.learn.client;
+package org.spring.openai.learn.config;
 
 import org.spring.openai.client.config.OpenAIBaseClient;
 import org.spring.openai.client.config.OpenAIConfig;
-import org.spring.openai.learn.config.OpenAIChatCompletionClientConfig;
 import org.spring.openai.learn.model.ChatCompletionRequest;
 import org.spring.openai.learn.model.ChatCompletionResponse;
 import org.spring.openai.learn.model.Message;
@@ -28,17 +27,17 @@ public class OpenAIChatCompletionClient {
     public ChatCompletionResponse completeChat(String term) {
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest
-                                                            .builder()
-                                                            .n(chatCompletionClientConfig.getNumberOfOptions())
-                                                            .temperature(chatCompletionClientConfig.getTemperature())
-                                                            .model(openAIConfig.getModel())
-                                                            .messages(List
-                                                                    .of(Message.builder()
-                                                                                .content(term)
-                                                                                .role(chatCompletionClientConfig
-                                                                                                        .getRole())
-                                                                                .build()))
-                                                            .build();
+                .builder()
+                .n(chatCompletionClientConfig.getNumberOfOptions())
+                .temperature(chatCompletionClientConfig.getTemperature())
+                .model(openAIConfig.getModel())
+                .messages(List
+                        .of(Message.builder()
+                                   .content(term)
+                                   .role(chatCompletionClientConfig
+                                           .getRole())
+                                   .build()))
+                .build();
 
         return builder.build()
                       .post()
