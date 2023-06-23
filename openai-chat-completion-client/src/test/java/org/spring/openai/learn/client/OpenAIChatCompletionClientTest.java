@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.spring.openai.client.OpenAIClientAutoConfiguration;
 import org.spring.openai.learn.OpenAIChatCompletionClientAutoConfiguration;
-import org.spring.openai.learn.config.OpenAIChatCompletionClient;
 import org.spring.openai.learn.model.ChatCompletionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -13,7 +13,5 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:openai-client-defaults.properties")
 @Import({OpenAIConfig.class, OpenAIBaseClientConfig.class})
 public class OpenAIClientAutoConfiguration {
-    public OpenAIClientAutoConfiguration() {
-        System.out.println("--------------------- OpenAIClientAutoConfiguration ---------------------");
-    }
+
 }

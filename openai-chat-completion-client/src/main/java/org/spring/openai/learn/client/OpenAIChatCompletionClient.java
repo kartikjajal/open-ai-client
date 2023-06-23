@@ -1,7 +1,8 @@
-package org.spring.openai.learn.config;
+package org.spring.openai.learn.client;
 
 import org.spring.openai.client.config.OpenAIBaseClient;
 import org.spring.openai.client.config.OpenAIConfig;
+import org.spring.openai.learn.config.OpenAIChatCompletionClientConfig;
 import org.spring.openai.learn.model.ChatCompletionRequest;
 import org.spring.openai.learn.model.ChatCompletionResponse;
 import org.spring.openai.learn.model.Message;

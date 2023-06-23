@@ -12,7 +12,4 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:openai-client-chat-completion-defaults.properties")
 @EnableConfigurationProperties(OpenAIChatCompletionClientConfig.class)
 public class OpenAIChatCompletionClientAutoConfiguration {
-    public OpenAIChatCompletionClientAutoConfiguration() {
-        System.out.println("------------- OpenAIChatCompletionClientAutoConfiguration --------------");
-    }
 }
