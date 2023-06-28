@@ -21,7 +21,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {
-        OpenAIConfig.class
+        OpenAIConfig.class,
+        OpenAIBaseClientConfig.class
 })
 @ImportAutoConfiguration(classes = {
         OpenAIClientAutoConfiguration.class

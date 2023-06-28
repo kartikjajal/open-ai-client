@@ -11,10 +11,6 @@ import reactor.core.publisher.Mono;
 @Configuration
 public class OpenAIBaseClientConfig {
 
-    public OpenAIBaseClientConfig(){
-        System.out.println("-------- OpenAIBaseClientConfig -------");
-    }
-
     @Autowired
     private OpenAIConfig openAIConfig;
 
