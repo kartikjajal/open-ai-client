@@ -40,13 +40,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @WireMockTest(httpPort = 9898)
 class OpenAIChatCompletionClientTest {
 
+    private final ObjectMapper objectMapper = new ObjectMapper();
     @Autowired
     private OpenAIChatCompletionClient chatCompletionClient;
-
     @Value("classpath:chat-completion-response.json")
     private Resource expectedResource;
-
-    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     @SneakyThrows
